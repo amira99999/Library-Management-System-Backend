@@ -46,6 +46,7 @@ public class BorrowingControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "librarian", roles = {"LIBRARIAN"})
     void returnBook_ShouldReturnBorrowingRecord() throws Exception {
         // Arrange
         BorrowingRecord record = new BorrowingRecord();
